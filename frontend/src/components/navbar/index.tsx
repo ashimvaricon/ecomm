@@ -2,7 +2,6 @@ import { Box, IconButton, Typography } from "@mui/material";
 import AppBar from "@mui/material/AppBar";
 import Toolbar from "@mui/material/Toolbar";
 import ShoppingBasketIcon from "@mui/icons-material/ShoppingBasket";
-import { Outlet } from "react-router-dom";
 import NavbarLink, { NavbarLinkProps } from "./NavbarLink";
 
 const navbarItem: NavbarLinkProps[] = [
@@ -40,9 +39,6 @@ const Navbar: React.FC = () => {
           </Box>
         </Toolbar>
       </AppBar>
-      <main style={{ marginTop: "64px" }}>
-        <Outlet />
-      </main>
     </Box>
   );
 };
