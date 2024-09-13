@@ -3,19 +3,16 @@ import AppBar from "@mui/material/AppBar";
 import Toolbar from "@mui/material/Toolbar";
 import ShoppingBasketIcon from "@mui/icons-material/ShoppingBasket";
 import { Outlet } from "react-router-dom";
-import NavbarLink, { NavbarLinkProps } from "./NavbarLink";
+import NavbarLink from "./NavbarLink";
+import useMediaQuery from "@mui/material/useMediaQuery";
+import { useTheme } from "@mui/material/styles";
+import { navbarItem } from "./nav";
+import Sidebar from "./Sidebar";
 
-const navbarItem: NavbarLinkProps[] = [
-  {
-    name: "Home",
-    path: "/",
-  },
-  {
-    name: "Product",
-    path: "/product",
-  },
-];
 const Navbar: React.FC = () => {
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down("md"));
+
   return (
     <Box>
       <AppBar position="fixed" color="primary">
@@ -33,11 +30,15 @@ const Navbar: React.FC = () => {
             Ecomms Nepal
           </Typography>
 
-          <Box sx={{ gap: 2 }} display="flex">
-            {navbarItem.map((item) => (
-              <NavbarLink name={item.name} path={item.path} />
-            ))}
-          </Box>
+          {isMobile ? (
+            <Sidebar />
+          ) : (
+            <Box sx={{ gap: 2 }} display="flex">
+              {navbarItem.map((item) => (
+                <NavbarLink key={item.name} name={item.name} path={item.path} />
+              ))}
+            </Box>
+          )}
         </Toolbar>
       </AppBar>
       <main style={{ marginTop: "64px" }}>
