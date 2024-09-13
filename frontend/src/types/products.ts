@@ -4,6 +4,7 @@ export interface Comment {
 }
 
 export interface Product {
+    slug: string;
     name: string;
     description: string;
     price: number;
@@ -15,4 +16,20 @@ export interface Product {
 
 export interface ProductCardProps {
     product: Product;
+}
+
+export interface ProductDetailsInfoProps {
+    description: string;
+}
+
+export interface ProductImageProps {
+    image: string;
+    name: string;
+}
+
+export interface ProductInfoProps {
+    name: string;
+    category: string;
+    price: number;
+    rating: number;
 }
