@@ -7,7 +7,7 @@ export const navbarItem: NavbarLinkProps[] = [
     },
     {
       name: "Product",
-      path: "/product",
+      path: "/products",
     },
   ];
   

@@ -1,3 +1,3 @@
-export type LazyLoadProps= {
-    Component: React.LazyExoticComponent<React.FC>;
-  }
+export type LazyLoadProps<T = object> = {
+  Component: React.LazyExoticComponent<React.ComponentType<T>>;
+};
