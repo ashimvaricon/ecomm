@@ -2,7 +2,6 @@ import React from "react";
 import { Typography, Chip, Box, Rating } from "@mui/material";
 import { ProductInfoProps } from "../../../types/products";
 
-const helloWorld = "Hello this is a dummy message!";
 const ProductInfo: React.FC<ProductInfoProps> = ({
     name,
     category,
