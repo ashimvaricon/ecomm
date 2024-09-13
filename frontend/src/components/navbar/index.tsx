@@ -11,6 +11,7 @@ import ShoppingBasketIcon from "@mui/icons-material/ShoppingBasket";
 import NavbarLink from "./NavbarLink";
 import { navbarItem } from "./nav";
 import Sidebar from "./Sidebar";
+import { Outlet } from "react-router-dom";
 
 const Navbar: React.FC = () => {
   const theme = useTheme();
@@ -44,6 +45,9 @@ const Navbar: React.FC = () => {
           )}
         </Toolbar>
       </AppBar>
+      <main style={{ marginTop: "64px" }}>
+        <Outlet />
+      </main>
     </Box>
   );
 };

@@ -18,7 +18,7 @@ const Sidebar = () => {
     setIsDrawerOpen(open);
   };
 
-  const drawer = (
+  const CustomDrawer = (
     <Drawer anchor="left" open={isdrawerOpen} onClose={toggleDrawer(false)}>
       <Box
         sx={{ width: 250 }}
@@ -45,7 +45,7 @@ const Sidebar = () => {
       <IconButton color="inherit" onClick={toggleDrawer(true)}>
         <MenuIcon />
       </IconButton>
-      {drawer}
+      {CustomDrawer}
     </Box>
   );
 };
