@@ -2,6 +2,7 @@ import { Product } from "../types/products";
 
 const products: Product[] = [
     {
+        slug: "t-shirt",
         name: "T-Shirt",
         description: "A comfortable cotton t-shirt.",
         price: 19.99,
@@ -14,6 +15,7 @@ const products: Product[] = [
         ],
     },
     {
+        slug: "bluetooth-headphones",
         name: "Bluetooth Headphones",
         description: "Noise-cancelling over-ear headphones.",
         price: 89.99,
@@ -29,6 +31,7 @@ const products: Product[] = [
         ],
     },
     {
+        slug: "smart-watch",
         name: "Smart Watch",
         description: "A smartwatch with fitness tracking features.",
         price: 149.99,
@@ -41,6 +44,7 @@ const products: Product[] = [
         ],
     },
     {
+        slug: "coffee-maker",
         name: "Coffee Maker",
         description: "A drip coffee maker with programmable settings.",
         price: 59.99,
@@ -53,6 +57,7 @@ const products: Product[] = [
         ],
     },
     {
+        slug: "yoga-mat",
         name: "Yoga Mat",
         description: "A non-slip yoga mat for exercise and stretching.",
         price: 29.99,
@@ -65,6 +70,7 @@ const products: Product[] = [
         ],
     },
     {
+        slug: "portable-charger",
         name: "Portable Charger",
         description:
             "A high-capacity power bank for charging devices on the go.",
@@ -78,6 +84,7 @@ const products: Product[] = [
         ],
     },
     {
+        slug: "sunglasses",
         name: "Sunglasses",
         description: "Stylish sunglasses with UV protection.",
         price: 24.99,
@@ -93,6 +100,7 @@ const products: Product[] = [
         ],
     },
     {
+        slug: "desk-chair",
         name: "Desk Chair",
         description: "Ergonomic office chair with adjustable features.",
         price: 119.99,
@@ -105,6 +113,7 @@ const products: Product[] = [
         ],
     },
     {
+        slug: "novel-book",
         name: "Novel Book",
         description: "A bestselling novel by a popular author.",
         price: 14.99,
@@ -120,6 +129,7 @@ const products: Product[] = [
         ],
     },
     {
+        slug: "camera",
         name: "Camera",
         description:
             "A high-resolution digital camera for photography enthusiasts.",
@@ -133,6 +143,7 @@ const products: Product[] = [
         ],
     },
     {
+        slug: "camping-tent",
         name: "Camping Tent",
         description: "A weather-resistant tent for outdoor camping.",
         price: 89.99,
