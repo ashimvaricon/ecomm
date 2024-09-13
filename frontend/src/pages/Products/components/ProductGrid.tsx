@@ -6,8 +6,8 @@ import ProductCard from "./ProductCard";
 const ProductGrid: React.FC = () => {
     return (
         <Grid container spacing={4}>
-            {products.map((product, index) => (
-                <Grid key={index} size={{ xs: 2, sm: 4, md: 4 }}>
+            {products.map((product) => (
+                <Grid key={product.name} size={{ xs: 2, sm: 4, md: 4 }}>
                     <Link
                         to={`/product/${product.name.replace(" ", "-")}`}
                         style={{
