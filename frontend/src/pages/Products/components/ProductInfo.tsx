@@ -14,7 +14,7 @@ const ProductInfo: React.FC<ProductInfoProps> = ({
         </Typography>
         <Chip label={category} color="primary" size="small" sx={{ mb: 2 }} />
         <Typography variant="h5" color="primary" gutterBottom>
-            ${price.toFixed(2)}
+            Rs. {price.toFixed(2)}
         </Typography>
         <Box display="flex" alignItems="center" mb={2}>
             <Rating value={rating} readOnly />
