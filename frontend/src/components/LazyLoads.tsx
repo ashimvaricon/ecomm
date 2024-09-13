@@ -1,10 +1,7 @@
 import React, { Suspense } from "react";
 import Loading from "./Loader";
 import ErrorBoundary from "./ErrorBoundary";
-
-interface LazyLoadProps {
-  Component: React.LazyExoticComponent<React.FC>;
-}
+import { LazyLoadProps } from "../types/lazyload";
 
 const LazyLoad: React.FC<LazyLoadProps> = ({ Component }) => {
   return (
