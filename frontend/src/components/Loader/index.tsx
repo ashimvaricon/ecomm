@@ -1,30 +1,34 @@
 import React from "react";
-import { Box, CircularProgress, Typography } from "@mui/material";
+import { Box, CircularProgress, Typography, styled } from "@mui/material";
 
 type LoadingProps = {
   size?: number;
   message?: string;
 };
 
-const Loading: React.FC<LoadingProps> = ({ size, message }) => {
+const StyledBox = styled(Box)(() => ({
+  display: "flex",
+  justifyContent: "center",
+  alignItems: "center",
+  flexDirection: "column",
+  height: "100vh",
+}));
+
+const StyledTypography = styled(Typography)(({ theme }) => ({
+  marginTop: theme.spacing(2),
+}));
+
+const Loader: React.FC<LoadingProps> = ({ size = 40, message }) => {
   return (
-    <Box
-      sx={{
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-        flexDirection: "column",
-        height: "100vh",
-      }}
-    >
+    <StyledBox>
       <CircularProgress size={size} />
       {message && (
-        <Typography sx={{ marginTop: 2 }} variant="body1" color="textSecondary">
+        <StyledTypography variant="body1" color="textSecondary">
           {message}
-        </Typography>
+        </StyledTypography>
       )}
-    </Box>
+    </StyledBox>
   );
 };
 
-export default Loading;
+export default Loader;
