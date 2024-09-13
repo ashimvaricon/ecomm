@@ -1,8 +1,12 @@
 import { Card, CardContent, CardMedia, Typography } from "@mui/material";
 import productStyles from "./styles";
 import { ProductCardProps } from "../../../types/products";
+import NotFound from "../../../components/NotFound";
 
 const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
+    if (!product) {
+        return <NotFound />;
+    }
     return (
         <Card sx={productStyles.cardStyles}>
             <CardMedia
