@@ -12,3 +12,7 @@ export interface Product {
     rating: number;
     comments: Comment[];
 }
+
+export interface ProductCardProps {
+    product: Product;
+}
