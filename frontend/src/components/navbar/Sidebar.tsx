@@ -12,14 +12,14 @@ import { NavLink } from "react-router-dom";
 import MenuIcon from "@mui/icons-material/Menu";
 
 const Sidebar = () => {
-  const [drawerOpen, setDrawerOpen] = useState(false);
+  const [isdrawerOpen, setIsDrawerOpen] = useState(false);
 
   const toggleDrawer = (open: boolean) => () => {
-    setDrawerOpen(open);
+    setIsDrawerOpen(open);
   };
 
   const drawer = (
-    <Drawer anchor="left" open={drawerOpen} onClose={toggleDrawer(false)}>
+    <Drawer anchor="left" open={isdrawerOpen} onClose={toggleDrawer(false)}>
       <Box
         sx={{ width: 250 }}
         role="presentation"

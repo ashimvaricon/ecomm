@@ -1,4 +1,6 @@
-const navbarItem: NavbarLinkProps[] = [
+import { NavbarLinkProps } from "./NavbarLink";
+
+export const navbarItem: NavbarLinkProps[] = [
     {
       name: "Home",
       path: "/",
