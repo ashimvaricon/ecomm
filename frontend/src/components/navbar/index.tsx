@@ -1,11 +1,14 @@
-import { Box, IconButton, Typography } from "@mui/material";
+import {
+  Box,
+  IconButton,
+  Typography,
+  useMediaQuery,
+  useTheme,
+} from "@mui/material";
 import AppBar from "@mui/material/AppBar";
 import Toolbar from "@mui/material/Toolbar";
 import ShoppingBasketIcon from "@mui/icons-material/ShoppingBasket";
-import { Outlet } from "react-router-dom";
 import NavbarLink from "./NavbarLink";
-import useMediaQuery from "@mui/material/useMediaQuery";
-import { useTheme } from "@mui/material/styles";
 import { navbarItem } from "./nav";
 import Sidebar from "./Sidebar";
 
@@ -41,9 +44,6 @@ const Navbar: React.FC = () => {
           )}
         </Toolbar>
       </AppBar>
-      <main style={{ marginTop: "64px" }}>
-        <Outlet />
-      </main>
     </Box>
   );
 };
