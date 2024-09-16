@@ -1,18 +1,6 @@
-import { Controller, Control, FieldValues, Path } from "react-hook-form";
+import { Controller, FieldValues } from "react-hook-form";
 import Select from "react-select";
-
-type SelectOptionType = {
-  value: string;
-  label: string;
-};
-
-type SelectFieldProps<T extends FieldValues> = {
-  name: Path<T>;
-  control: Control<T>;
-  options: SelectOptionType[];
-  placeholder?: string;
-  isClearable?: boolean;
-};
+import { SelectFieldProps } from "../../../types/form/SelectField";
 
 const SelectField = <T extends FieldValues>({
   name,

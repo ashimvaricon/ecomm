@@ -1,4 +1,4 @@
-import { Controller, Control, Path, FieldValues } from "react-hook-form";
+import { Controller, FieldValues } from "react-hook-form";
 import {
   FormControl,
   FormLabel,
@@ -6,19 +6,7 @@ import {
   RadioGroup,
   Radio,
 } from "@mui/material";
-
-type RadioOption = {
-  label: string;
-  value: boolean;
-};
-
-type RadioGroupFieldProps<T extends FieldValues> = {
-  name: Path<T>;
-  control: Control<T>;
-  label: string;
-  options: RadioOption[];
-  row?: boolean;
-};
+import { RadioGroupFieldProps } from "../../../types/form/RadioField";
 
 const RadioGroupField = <T extends FieldValues>({
   name,

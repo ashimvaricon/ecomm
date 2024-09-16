@@ -1,17 +1,6 @@
 import { TextField } from "@mui/material";
-import {
-  UseFormRegister,
-  FieldValues,
-  Path,
-  FieldErrors,
-} from "react-hook-form";
-
-type InputTextFieldProps<T extends FieldValues> = {
-  label: string;
-  fieldName: Path<T>;
-  register: UseFormRegister<T>;
-  errors: FieldErrors<T>;
-};
+import { FieldValues } from "react-hook-form";
+import { InputTextFieldProps } from "../../../types/form/InputNumberField";
 
 const InputTextField = <T extends FieldValues>({
   label,
