@@ -6,6 +6,7 @@ import ProtectedRoute from "./components/ProtectedRoute";
 import RoleBasedRoute from "./components/RoleBasedRoute";
 import Home from "./components/Home";
 import AdminDashboard from "./components/AdminDashboard";
+import Dashboard from "./components/Dashboard";
 import ErrorPage from "./components/ErrorPage";
 
 const App: React.FC = () => {
@@ -25,7 +26,7 @@ const App: React.FC = () => {
         path="/user-dashboard"
         element={
           <RoleBasedRoute allowedRoles={["user"]}>
-            <Home />
+            <Dashboard />
           </RoleBasedRoute>
         }
       />
@@ -37,7 +38,7 @@ const App: React.FC = () => {
           </RoleBasedRoute>
         }
       />
-      <Route path="/403" element={<ErrorPage />} />
+      <Route path="*" element={<ErrorPage />} />
     </Routes>
   );
 };

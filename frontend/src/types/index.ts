@@ -7,7 +7,18 @@ export interface User {
   name: string;
   email: string;
   password: string;
-  role: "admin" | "user";
+  role: string;
+}
+
+export interface SignUpFormData {
+  name: string;
+  email: string;
+  password: string;
+}
+
+export interface LoginFormData {
+  email: string;
+  password: string;
 }
 
 export interface AuthContextType {
