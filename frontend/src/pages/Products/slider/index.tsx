@@ -20,7 +20,11 @@ const CategorySlider = () => {
         {categories.map((category, index) => (
           <CategoryBoxStyled key={index}>
             <StackStyled>
-              <CatTypographyStyled variant="h6">{category}</CatTypographyStyled>
+              {/* Render the icon as a component */}
+              <category.icon sx={{ width: "55px", height: "auto" }} />
+              <CatTypographyStyled variant="h6">
+                {category.name}
+              </CatTypographyStyled>
             </StackStyled>
           </CategoryBoxStyled>
         ))}
