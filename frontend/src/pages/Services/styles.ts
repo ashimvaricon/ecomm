@@ -1,4 +1,7 @@
 import { Box, styled, Typography } from "@mui/material";
+import LocalShippingOutlinedIcon from "@mui/icons-material/LocalShippingOutlined";
+import ShoppingBagOutlinedIcon from "@mui/icons-material/ShoppingBagOutlined";
+import StarBorderOutlinedIcon from "@mui/icons-material/StarBorderOutlined";
 
 export const BoxStyled = styled(Box)({
   marginTop: "100px",
@@ -27,3 +30,31 @@ export const BoxIconStyled = styled(Box)({
   alignItems: "center",
   gap: 1.5,
 });
+
+export const LocalShippingOutlinedIconStyled = styled(
+  LocalShippingOutlinedIcon
+)({
+  width: "55px",
+  height: "auto",
+});
+
+export const TypographyStyled = styled(Typography)(({ theme }) => ({
+  margin: "auto",
+  width: "300px",
+  textAlign: "center",
+  wordWrap: "break-word",
+}));
+
+export const ShoppingBagOutlinedIconStyled = styled(ShoppingBagOutlinedIcon)(
+  ({ theme }) => ({
+    width: "55px",
+    height: "auto",
+  })
+);
+
+export const StarBorderOutlinedIconStyled = styled(StarBorderOutlinedIcon)(
+  ({ theme }) => ({
+    width: "55px",
+    height: "auto",
+  })
+);

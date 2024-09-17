@@ -1,8 +1,14 @@
 import { Typography, Stack } from "@mui/material";
-import LocalShippingOutlinedIcon from "@mui/icons-material/LocalShippingOutlined";
-import ShoppingBagOutlinedIcon from "@mui/icons-material/ShoppingBagOutlined";
-import StarBorderOutlinedIcon from "@mui/icons-material/StarBorderOutlined";
-import { Box1Styled, BoxIconStyled, BoxStyled } from "./styles";
+
+import {
+  Box1Styled,
+  BoxIconStyled,
+  BoxStyled,
+  LocalShippingOutlinedIconStyled,
+  ShoppingBagOutlinedIconStyled,
+  StarBorderOutlinedIconStyled,
+  TypographyStyled,
+} from "./styles";
 
 const Services = () => {
   return (
@@ -13,21 +19,11 @@ const Services = () => {
           <Box1Styled>
             <Typography>
               <BoxIconStyled>
-                <LocalShippingOutlinedIcon
-                  sx={{ width: "55px", height: "auto" }}
-                />
+                <LocalShippingOutlinedIconStyled />
                 <Typography variant="h5">Fast Delivery </Typography>
-                <Typography
-                  variant="body2"
-                  sx={{
-                    margin: "auto",
-                    width: "300px",
-                    textAlign: "center",
-                    wordWrap: "break-word",
-                  }}
-                >
+                <TypographyStyled variant="body2">
                   variations of passages of Lorem Ipsum available{" "}
-                </Typography>
+                </TypographyStyled>
               </BoxIconStyled>
             </Typography>
           </Box1Styled>
@@ -35,21 +31,11 @@ const Services = () => {
           <Box1Styled>
             <Typography>
               <BoxIconStyled>
-                <ShoppingBagOutlinedIcon
-                  sx={{ width: "55px", height: "auto" }}
-                />
+                <ShoppingBagOutlinedIconStyled />
                 <Typography variant="h5">Free Shipping</Typography>
-                <Typography
-                  variant="body2"
-                  sx={{
-                    margin: "auto",
-                    width: "300px",
-                    textAlign: "center",
-                    wordWrap: "break-word",
-                  }}
-                >
+                <TypographyStyled variant="body2">
                   variations of passages of Lorem Ipsum available{" "}
-                </Typography>
+                </TypographyStyled>
               </BoxIconStyled>
             </Typography>
           </Box1Styled>
@@ -57,21 +43,11 @@ const Services = () => {
           <Box1Styled>
             <Typography>
               <BoxIconStyled>
-                <StarBorderOutlinedIcon
-                  sx={{ width: "55px", height: "auto" }}
-                />
+                <StarBorderOutlinedIconStyled />
                 <Typography variant="h5">Best Quality</Typography>
-                <Typography
-                  variant="body2"
-                  sx={{
-                    margin: "auto",
-                    width: "300px",
-                    textAlign: "center",
-                    wordWrap: "break-word",
-                  }}
-                >
+                <TypographyStyled variant="body2">
                   variations of passages of Lorem Ipsum available{" "}
-                </Typography>
+                </TypographyStyled>
               </BoxIconStyled>
             </Typography>
           </Box1Styled>
