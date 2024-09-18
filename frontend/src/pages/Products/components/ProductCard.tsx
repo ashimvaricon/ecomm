@@ -9,7 +9,7 @@ import {
 import productStyles from "./styles";
 import { ProductCardProps } from "../../../types/products";
 import NotFound from "../../../components/NotFound";
-import { Link } from "react-router-dom";
+import AddToCart from "../components/AddToCart";
 
 const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
   if (!product) {
@@ -27,9 +27,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
         </Typography>
       </CardContent>
       <CardActions>
-        <Button variant="contained" component={Link} to="/cart">
-          Add to Cart
-        </Button>
+        <AddToCart />
       </CardActions>
     </Card>
   );
