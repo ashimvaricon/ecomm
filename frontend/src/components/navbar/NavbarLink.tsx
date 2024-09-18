@@ -11,8 +11,9 @@ const NavbarLink: React.FC<NavbarLinkProps> = ({ name, path }) => {
     <NavLink
       to={path}
       style={({ isActive }) => ({
-        textDecoration: "none",
-        color: isActive ? "black" : "inherit",
+        textDecoration: isActive ? "underline" : "none",
+        textUnderlineOffset: "6px",
+        color: isActive ? "white" : "#EF476F",
       })}
     >
       <Typography variant="h6">{name}</Typography>
