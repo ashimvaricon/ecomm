@@ -10,43 +10,43 @@ import ProductDetailsInfo from "../components/ProductDetailsInfo";
 import useProducts from "../../../hooks/useProducts";
 
 const ProductDetails: React.FC = () => {
-    const { slug } = useParams<{ slug: string }>();
-    const { getProductBySlug } = useProducts();
-    const product = getProductBySlug(slug as string);
+  const { slug } = useParams<{ slug: string }>();
+  const { getProductBySlug } = useProducts();
+  const product = getProductBySlug(slug as string);
 
-    if (!product) {
-        return (
-            <Box
-                display="flex"
-                justifyContent="center"
-                alignItems="center"
-                height="100vh"
-            >
-                <CircularProgress />
-            </Box>
-        );
-    }
-
+  if (!product) {
     return (
-        <Box display="flex" flexDirection="column">
-            <MainHeader />
-            <Box p={3}>
-                <Grid container spacing={4}>
-                    <ProductImage image={product.image} name={product.name} />
-                    <Grid size={{ xs: 12, md: 6 }}>
-                        <ProductInfo
-                            name={product.name}
-                            category={product.category}
-                            price={product.price}
-                            rating={product.rating}
-                        />
-                        <AddToCart />
-                        <ProductDetailsInfo description={product.description} />
-                    </Grid>
-                </Grid>
-            </Box>
-        </Box>
+      <Box
+        display="flex"
+        justifyContent="center"
+        alignItems="center"
+        height="100vh"
+      >
+        <CircularProgress />
+      </Box>
     );
+  }
+
+  return (
+    <Box display="flex" flexDirection="column">
+      <MainHeader />
+      <Box p={3}>
+        <Grid container spacing={4}>
+          <ProductImage image={product.image} name={product.name} />
+          <Grid size={{ xs: 12, md: 6 }}>
+            <ProductInfo
+              name={product.name}
+              category={product.category}
+              price={product.price}
+              rating={product.rating}
+            />
+            <AddToCart />
+            <ProductDetailsInfo description={product.description} />
+          </Grid>
+        </Grid>
+      </Box>
+    </Box>
+  );
 };
 
 export default ProductDetails;
