@@ -2,7 +2,7 @@ import { ROUTES } from "../constants/routes";
 import React from "react";
 
 export interface RouteConfig<T = object> {
-  path: ROUTES;
+  path: string;
   component: React.LazyExoticComponent<React.ComponentType<T>>;
 }
 
