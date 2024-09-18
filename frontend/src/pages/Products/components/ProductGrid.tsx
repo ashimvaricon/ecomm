@@ -9,7 +9,7 @@ const ProductGrid: React.FC = () => {
             {products.map((product) => (
                 <Grid key={product.name} size={{ xs: 2, sm: 4, md: 4 }}>
                     <Link
-                        to={`/product/${product.name.replace(" ", "-")}`}
+                        to={`/products/${product.slug}`}
                         style={{
                             textDecoration: "none",
                         }}

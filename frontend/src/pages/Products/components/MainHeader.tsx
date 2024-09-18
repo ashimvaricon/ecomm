@@ -1,23 +1,6 @@
-import {
-    AppBar,
-    Box,
-    createTheme,
-    ThemeProvider,
-    Toolbar,
-    Typography,
-} from "@mui/material";
-import productStyles from "./styles";
+import { AppBar, ThemeProvider, Toolbar, Typography } from "@mui/material";
+import productStyles, { theme } from "./styles";
 
-const theme = createTheme({
-    palette: {
-        primary: {
-            main: "#d4e6f8",
-        },
-    },
-    typography: {
-        fontFamily: "Arial, sans-serif",
-    },
-});
 const MainHeader: React.FC = () => {
     return (
         <ThemeProvider theme={theme}>
