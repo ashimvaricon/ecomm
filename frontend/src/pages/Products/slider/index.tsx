@@ -14,7 +14,9 @@ import { categories } from "../../../constants/categories";
 const CategorySlider = () => {
   return (
     <BoxStyled>
-      <TypographyStyled variant="h3">Featured Categories</TypographyStyled>
+      <TypographyStyled variant="h3" gutterBottom>
+        Featured Categories
+      </TypographyStyled>
 
       <Slider {...categorySettings}>
         {categories.map((category, index) => (
