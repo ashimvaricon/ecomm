@@ -1,11 +1,11 @@
-import Navbar from "../components/Navbar";
+import Navbar from "../components/navbar";
 import { Outlet } from "react-router-dom";
 
 const AppLayout = () => {
   return (
     <div>
       <Navbar />
-      <main style={{ marginTop: "64px" }}>
+      <main style={{ marginTop: "40px" }}>
         <Outlet />
       </main>
     </div>

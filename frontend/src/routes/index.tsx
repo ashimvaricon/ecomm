@@ -4,7 +4,7 @@ import {
   Route,
   RouterProvider,
 } from "react-router-dom";
-import Navbar from "../components/Navbar";
+import Navbar from "../components/navbar";
 import LazyLoad from "../components/LazyLoads";
 import { routeConfigs } from "./routeConfig";
 

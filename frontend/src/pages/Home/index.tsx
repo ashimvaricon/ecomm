@@ -6,6 +6,7 @@ import { BoxStyled, CenteredBox, CustomBox, StyledImage } from "./styles";
 import { sliderSettings } from "../../utils/sliderSettings";
 import Services from "../Services";
 import CategorySlider from "../Products/slider/index";
+import Products from "../Products";
 const Home = () => {
   return (
     <>
@@ -23,6 +24,8 @@ const Home = () => {
       <Services />
 
       <CategorySlider />
+
+      <Products />
     </>
   );
 };

@@ -1,5 +1,4 @@
 import { Typography, Stack } from "@mui/material";
-
 import {
   Box1Styled,
   BoxIconStyled,
@@ -15,16 +14,20 @@ const Services = () => {
     <div>
       <BoxStyled>
         <Typography variant="h3">Why Shop With Us</Typography>
-        <Stack direction="row" justifyContent="center" spacing={3}>
+        <Stack
+          direction={{ xs: "column", md: "row" }} // Responsive layout direction
+          justifyContent="center"
+          spacing={3}
+        >
           <Box1Styled>
             <Typography>
               <BoxIconStyled>
                 <LocalShippingOutlinedIconStyled />
                 <Typography color="white" variant="h5">
-                  Fast Delivery{" "}
+                  Fast Delivery
                 </Typography>
                 <TypographyStyled variant="body2">
-                  variations of passages of Lorem Ipsum available{" "}
+                  Variations of passages of Lorem Ipsum available
                 </TypographyStyled>
               </BoxIconStyled>
             </Typography>
@@ -38,7 +41,7 @@ const Services = () => {
                   Free Shipping
                 </Typography>
                 <TypographyStyled variant="body2">
-                  variations of passages of Lorem Ipsum available{" "}
+                  Variations of passages of Lorem Ipsum available
                 </TypographyStyled>
               </BoxIconStyled>
             </Typography>
@@ -52,7 +55,7 @@ const Services = () => {
                   Best Quality
                 </Typography>
                 <TypographyStyled variant="body2">
-                  variations of passages of Lorem Ipsum available{" "}
+                  Variations of passages of Lorem Ipsum available
                 </TypographyStyled>
               </BoxIconStyled>
             </Typography>

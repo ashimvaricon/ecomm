@@ -45,7 +45,7 @@ const Navbar: React.FC = () => {
           )}
         </Toolbar>
       </AppBar>
-      <main style={{ marginTop: "64px" }}>
+      <main style={{ marginTop: "40px" }}>
         <Outlet />
       </main>
     </Box>

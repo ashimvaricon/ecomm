@@ -1,57 +1,57 @@
 import { createTheme } from "@mui/material";
 
 const productStyles = {
-    tooltipStyles: {
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-    },
-    header: {
-        background: "#caf0f8",
-    },
-    headerText: {
-        fontWeight: "700",
-        padding: "2rem",
-        color: "#03045e",
-    },
+  tooltipStyles: {
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+  },
+  header: {
+    background: "#caf0f8",
+  },
+  headerText: {
+    fontWeight: "700",
+    padding: "2rem",
+    color: "#03045e",
+  },
 
-    productHeader: {
-        margin: 4,
-        display: "flex",
-        flexDirection: "column",
-        alignItems: "center",
+  productHeader: {
+    margin: 4,
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center",
+  },
+  productHeaderText: {
+    color: "#03045e",
+    fontWeight: "600",
+    display: "flex",
+    gap: 2,
+    justifyContent: "center",
+  },
+  productHeaderBox: {
+    width: 80,
+    height: 5,
+    background: "#0077b6",
+  },
+  cardStyles: {
+    height: "100%",
+    display: "flex",
+    flexDirection: "column",
+    "&:hover": {
+      boxShadow: 6,
     },
-    productHeaderText: {
-        color: "#03045e",
-        fontWeight: "600",
-        display: "flex",
-        gap: 2,
-        justifyContent: "center",
-    },
-    productHeaderBox: {
-        width: 80,
-        height: 5,
-        background: "#0077b6",
-    },
-    cardStyles: {
-        height: "100%",
-        display: "flex",
-        flexDirection: "column",
-        "&:hover": {
-            boxShadow: 6,
-        },
-    },
+  },
 };
 
 export const theme = createTheme({
-    palette: {
-        primary: {
-            main: "#d4e6f8",
-        },
+  palette: {
+    primary: {
+      main: "#d4e6f8",
     },
-    typography: {
-        fontFamily: "Arial, sans-serif",
-    },
+  },
+  typography: {
+    fontFamily: "Arial, sans-serif",
+  },
 });
 
 export default productStyles;
