@@ -1,4 +1,9 @@
-const Dashboard: React.FC = () => {
-  return <h1>User Dashboard</h1>;
+import { useAuth } from "../hooks/useAuth";
+
+const Dashboard = () => {
+  const { user } = useAuth();
+
+  return <div>Welcome, {user?.name}</div>;
 };
+
 export default Dashboard;

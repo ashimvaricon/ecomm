@@ -1,13 +1,14 @@
-import { ZodType } from "zod";
+import { ZodType, ZodUnknown } from "zod";
 
-export type FormData = Record<string, any>;
+export type FormData = Record<string, unknown>;
+//export type FormData<T extends Record<string, any> = Record<string, any>> = T;
 
 export interface User {
   id: number;
   name: string;
   email: string;
   password: string;
-  role: string;
+  role: "user" | "admin";
 }
 
 export interface SignUpFormData {
@@ -23,10 +24,11 @@ export interface LoginFormData {
 
 export interface AuthContextType {
   user: User | null;
+  isLoading: boolean;
   login: (userData: User) => void;
   logout: () => void;
 }
 
-export type UseFormProps<T extends ZodType<any, any>> = {
+export type UseFormProps<T extends ZodType<unknown, ZodUnknown>> = {
   schema: T;
 };

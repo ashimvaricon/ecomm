@@ -16,20 +16,18 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({
   const [user, setUser] = useState<User | null>(null);
 
   useEffect(() => {
-    const storedUser = getFromLocalStorage("user");
+    const storedUser = getFromLocalStorage<User>("user");
     if (storedUser) {
       setUser(storedUser);
     }
   }, []);
 
   const login = (userData: User) => {
-    //console.log("Logging in user:", userData); // Debugging line
     setUser(userData);
     setInLocalStorage("user", userData);
   };
 
   const logout = () => {
-    //console.log("Logging out user"); // Debugging line
     setUser(null);
     removeFromLocalStorage("user");
   };

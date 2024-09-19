@@ -1,36 +1,40 @@
 import { useState } from "react";
 import { useMutation } from "react-query";
 import { useNavigate } from "react-router-dom";
-import { signUp as signUpApi, login as loginApi } from "../services/api";
+import { signUp, login } from "../services/api";
 import { useAuth } from "./useAuth";
-import { FormData, SignUpFormData, LoginFormData } from "../types/index";
+import { SignUpFormData, LoginFormData, User } from "../types";
+
+type AuthFunction = typeof signUp | typeof login;
 
 interface UseAuthMutationResult {
   errorMessage: string | null;
   isLoading: boolean;
-  mutate: (data: SignUpFormData | LoginFormData) => void;
+  mutate: (data: SignUpFormData | LoginFormData) => Promise<void>;
 }
 
-const useAuthMutation = (
-  apiFunc: typeof signUpApi | typeof loginApi
-): UseAuthMutationResult => {
+const useAuthMutation = (authFunction: AuthFunction): UseAuthMutationResult => {
   const navigate = useNavigate();
-  const { login } = useAuth();
+  const { login: authLogin } = useAuth();
   const [errorMessage, setErrorMessage] = useState<string | null>(null);
 
-  const mutation = useMutation(apiFunc, {
-    onSuccess: (data) => {
-      login(data as FormData);
-      navigate("/");
+  const mutation = useMutation(authFunction, {
+    onSuccess: (data: User) => {
+      authLogin(data);
+      if (data.role === "admin") {
+        navigate("/admin-dashboard");
+      } else {
+        navigate("/user-dashboard");
+      }
     },
-    onError: (error: any) => {
+    onError: (error: Error) => {
       setErrorMessage(error.message || "An error occurred");
     },
   });
 
-  const mutate = (data: SignUpFormData | LoginFormData) => {
+  const mutate = async (data: SignUpFormData | LoginFormData) => {
     setErrorMessage(null);
-    mutation.mutate(data);
+    await mutation.mutateAsync(data);
   };
 
   return {

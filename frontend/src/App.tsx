@@ -25,17 +25,19 @@ const App: React.FC = () => {
       <Route
         path="/user-dashboard"
         element={
-          <RoleBasedRoute allowedRoles={["user"]}>
+          <ProtectedRoute>
             <Dashboard />
-          </RoleBasedRoute>
+          </ProtectedRoute>
         }
       />
       <Route
         path="/admin-dashboard"
         element={
-          <RoleBasedRoute allowedRoles={["admin"]}>
-            <AdminDashboard />
-          </RoleBasedRoute>
+          <ProtectedRoute>
+            <RoleBasedRoute allowedRoles={["admin"]}>
+              <AdminDashboard />
+            </RoleBasedRoute>
+          </ProtectedRoute>
         }
       />
       <Route path="*" element={<ErrorPage />} />
