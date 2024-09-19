@@ -1,11 +1,10 @@
 import { useState } from "react";
 import { useMutation } from "react-query";
 import { useNavigate } from "react-router-dom";
-import { signUp, login } from "../services/api";
 import { useAuth } from "./useAuth";
 import { SignUpFormData, LoginFormData, User } from "../types";
 
-type AuthFunction = typeof signUp | typeof login;
+type AuthFunction = (data: SignUpFormData | LoginFormData) => Promise<User>;
 
 interface UseAuthMutationResult {
   errorMessage: string | null;
@@ -24,7 +23,7 @@ const useAuthMutation = (authFunction: AuthFunction): UseAuthMutationResult => {
       if (data.role === "admin") {
         navigate("/admin-dashboard");
       } else {
-        navigate("/user-dashboard");
+        navigate("/");
       }
     },
     onError: (error: Error) => {

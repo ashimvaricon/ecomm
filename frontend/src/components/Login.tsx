@@ -1,9 +1,9 @@
 import React from "react";
-import { useForm } from "../hooks/useForm";
-import { loginSchema } from "../utils/validationSchema";
+import { useForm, SubmitHandler } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod"; 
+import { loginSchema } from "../utils/validationSchema"; 
 import useAuthMutation from "../hooks/useAuthMutation";
 import { login as loginApi } from "../services/api";
-import { SubmitHandler } from "react-hook-form";
 import FormField from "../components/FormField";
 import AlertMessage from "../components/AlertMessage";
 import { LoginFormData } from "../types/index";
@@ -20,7 +20,11 @@ const Login: React.FC = () => {
     register,
     handleSubmit,
     formState: { errors },
-  } = useForm({ schema: loginSchema });
+  } = useForm<LoginFormData>({
+    resolver: zodResolver(loginSchema),
+    defaultValues: {},
+  });
+
   const { errorMessage, isLoading, mutate } = useAuthMutation(loginApi);
 
   const onSubmit: SubmitHandler<LoginFormData> = (data) => {

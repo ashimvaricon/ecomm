@@ -1,7 +1,6 @@
 import { ZodType, ZodUnknown } from "zod";
 
 export type FormData = Record<string, unknown>;
-//export type FormData<T extends Record<string, any> = Record<string, any>> = T;
 
 export interface User {
   id: number;
@@ -24,7 +23,7 @@ export interface LoginFormData {
 
 export interface AuthContextType {
   user: User | null;
-  isLoading: boolean;
+  isLoading?: boolean;
   login: (userData: User) => void;
   logout: () => void;
 }

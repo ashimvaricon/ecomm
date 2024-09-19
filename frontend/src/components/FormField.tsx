@@ -1,11 +1,16 @@
 import React from "react";
 import { TextField } from "@mui/material";
-import { UseFormRegister, FieldError, FieldValues } from "react-hook-form";
+import {
+  UseFormRegister,
+  FieldError,
+  FieldValues,
+  Path,
+} from "react-hook-form";
 
 interface FormFieldProps<TFieldValues extends FieldValues> {
   label: string;
   type?: string;
-  name: keyof TFieldValues;
+  name: Path<TFieldValues>;
   register: UseFormRegister<TFieldValues>;
   error?: FieldError;
 }

@@ -14,9 +14,6 @@ const RoleBasedRoute: React.FC<RoleBasedRouteProps> = ({
   const { user } = useAuth();
   const location = useLocation();
 
-  //console.log("RoleBasedRoute User:", user); // Debugging line
-  //console.log("Allowed Roles:", allowedRoles); // Debugging line
-
   if (!user) {
     return <Navigate to="/login" state={{ from: location }} replace />;
   }

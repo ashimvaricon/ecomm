@@ -1,11 +1,12 @@
 import React from "react";
-import { useForm } from "../hooks/useForm";
+import { useForm, SubmitHandler } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
 import { signUpSchema } from "../utils/validationSchema";
 import useAuthMutation from "../hooks/useAuthMutation";
 import { signUp as signUpApi } from "../services/api";
 import FormField from "../components/FormField";
 import AlertMessage from "../components/AlertMessage";
-import { SignUpFormData } from "../types/index";
+import { SignUpFormData } from "../types";
 import {
   Container,
   Box,
@@ -19,10 +20,14 @@ const SignUp: React.FC = () => {
     register,
     handleSubmit,
     formState: { errors },
-  } = useForm({ schema: signUpSchema });
+  } = useForm<SignUpFormData>({
+    resolver: zodResolver(signUpSchema),
+    defaultValues: {},
+  });
+
   const { errorMessage, isLoading, mutate } = useAuthMutation(signUpApi);
 
-  const onSubmit = (data: SignUpFormData) => {
+  const onSubmit: SubmitHandler<SignUpFormData> = (data) => {
     mutate(data);
   };
 
