@@ -34,6 +34,7 @@ export const BoxIconStyled = styled(Box)({
 export const LocalShippingOutlinedIconStyled = styled(
   LocalShippingOutlinedIcon
 )({
+  color: "white",
   width: "55px",
   height: "auto",
 });
@@ -43,10 +44,12 @@ export const TypographyStyled = styled(Typography)(({ theme }) => ({
   width: "300px",
   textAlign: "center",
   wordWrap: "break-word",
+  color: "white",
 }));
 
 export const ShoppingBagOutlinedIconStyled = styled(ShoppingBagOutlinedIcon)(
   ({ theme }) => ({
+    color: "white",
     width: "55px",
     height: "auto",
   })
@@ -54,6 +57,7 @@ export const ShoppingBagOutlinedIconStyled = styled(ShoppingBagOutlinedIcon)(
 
 export const StarBorderOutlinedIconStyled = styled(StarBorderOutlinedIcon)(
   ({ theme }) => ({
+    color: "white",
     width: "55px",
     height: "auto",
   })

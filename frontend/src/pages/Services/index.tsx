@@ -20,7 +20,9 @@ const Services = () => {
             <Typography>
               <BoxIconStyled>
                 <LocalShippingOutlinedIconStyled />
-                <Typography variant="h5">Fast Delivery </Typography>
+                <Typography color="white" variant="h5">
+                  Fast Delivery{" "}
+                </Typography>
                 <TypographyStyled variant="body2">
                   variations of passages of Lorem Ipsum available{" "}
                 </TypographyStyled>
@@ -32,7 +34,9 @@ const Services = () => {
             <Typography>
               <BoxIconStyled>
                 <ShoppingBagOutlinedIconStyled />
-                <Typography variant="h5">Free Shipping</Typography>
+                <Typography color="white" variant="h5">
+                  Free Shipping
+                </Typography>
                 <TypographyStyled variant="body2">
                   variations of passages of Lorem Ipsum available{" "}
                 </TypographyStyled>
@@ -44,7 +48,9 @@ const Services = () => {
             <Typography>
               <BoxIconStyled>
                 <StarBorderOutlinedIconStyled />
-                <Typography variant="h5">Best Quality</Typography>
+                <Typography color="white" variant="h5">
+                  Best Quality
+                </Typography>
                 <TypographyStyled variant="body2">
                   variations of passages of Lorem Ipsum available{" "}
                 </TypographyStyled>

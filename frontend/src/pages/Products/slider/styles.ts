@@ -2,9 +2,9 @@ import { Box, Stack, Typography } from "@mui/material";
 import { styled } from "@mui/system";
 
 export const BoxStyled = styled(Box)({
-  marginTop: "50px",
-  width: "100%",
+  width: "70%",
   height: "auto",
+  margin: "70px auto",
 });
 
 export const TypographyStyled = styled(Typography)({

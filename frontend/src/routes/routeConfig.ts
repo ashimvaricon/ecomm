@@ -16,4 +16,8 @@ export const routeConfigs: RouteConfig[] = [
     path: ROUTES.ProductDetails,
     component: React.lazy(() => import("../pages/Products/ProductDetails")),
   },
+  {
+    path: ROUTES.Cart,
+    component: React.lazy(() => import("../pages/Cart")),
+  },
 ];
