@@ -1,3 +1,5 @@
+import { createTheme } from "@mui/material";
+
 const productStyles = {
     tooltipStyles: {
         display: "flex",
@@ -40,5 +42,16 @@ const productStyles = {
         },
     },
 };
+
+export const theme = createTheme({
+    palette: {
+        primary: {
+            main: "#d4e6f8",
+        },
+    },
+    typography: {
+        fontFamily: "Arial, sans-serif",
+    },
+});
 
 export default productStyles;
