@@ -4,14 +4,14 @@ import ShoppingBagOutlinedIcon from "@mui/icons-material/ShoppingBagOutlined";
 import StarBorderOutlinedIcon from "@mui/icons-material/StarBorderOutlined";
 
 // BoxStyled - Main container
-export const BoxStyled = styled(Box)(({ theme }) => ({
+export const BoxStyled = styled(Box)({
   marginTop: "100px",
   display: "flex",
   flexDirection: "column",
   justifyContent: "center",
   alignItems: "center",
   gap: "20px",
-}));
+});
 
 // Box1Styled - Individual service boxes
 export const Box1Styled = styled(Box)(({ theme }) => ({
@@ -62,10 +62,10 @@ export const StarBorderOutlinedIconStyled = styled(StarBorderOutlinedIcon)({
 });
 
 // TypographyStyled - for the text inside the boxes
-export const TypographyStyled = styled(Typography)(({ theme }) => ({
+export const TypographyStyled = styled(Typography)({
   margin: "auto",
   width: "300px",
   textAlign: "center",
   wordWrap: "break-word",
   color: "white",
-}));
+});

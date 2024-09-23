@@ -1,4 +1,4 @@
-import { Box, BoxProps, Grid } from "@mui/material";
+import { Box, BoxProps } from "@mui/material";
 import { styled } from "@mui/system";
 
 export const BoxStyled = styled(Box)<BoxProps>(({ theme }) => ({

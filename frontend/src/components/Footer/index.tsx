@@ -1,19 +1,23 @@
-import React from "react";
-import { Box, Grid, Typography, Link, IconButton } from "@mui/material";
-import { useTheme } from "@emotion/react";
+import {
+  Box,
+  Grid,
+  Typography,
+  Link,
+  IconButton,
+  useTheme,
+} from "@mui/material";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import TwitterIcon from "@mui/icons-material/Twitter";
-import { BoxStyled } from "./styles";
 
 const Footer = () => {
-  const theme = useTheme();
+  const theme = useTheme(); // This should be imported from MUI, not Emotion
 
   return (
     <Box
       component="footer"
       sx={{
-        backgroundColor: theme.palette.error.main, // Use your desired theme color
+        backgroundColor: theme.palette.primary.main, // Adjust the theme color here
         padding: theme.spacing(2), // Responsive spacing
         marginTop: "auto",
         borderTop: "1px solid #e0e0e0",

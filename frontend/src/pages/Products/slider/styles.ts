@@ -27,7 +27,7 @@ export const StackStyled = styled(Stack)({
   boxSizing: "border-box",
 });
 
-export const CatTypographyStyled = styled(Typography)(({ theme }) => ({
+export const CatTypographyStyled = styled(Typography)({
   fontSize: "16px",
   fontWeight: "500",
-}));
+});
