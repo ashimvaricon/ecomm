@@ -12,6 +12,7 @@ import NavbarLink from "./NavbarLink";
 import { navbarItem } from "./nav";
 import Sidebar from "./Sidebar";
 import { Outlet } from "react-router-dom";
+import Footer from "../Footer";
 
 const Navbar: React.FC = () => {
   const theme = useTheme();
@@ -48,6 +49,8 @@ const Navbar: React.FC = () => {
       <main style={{ marginTop: "40px" }}>
         <Outlet />
       </main>
+
+      <Footer />
     </Box>
   );
 };

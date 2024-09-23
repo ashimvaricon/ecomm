@@ -1,18 +1,22 @@
 import React from "react";
-import { Box, Grid, Typography, Link } from "@mui/material";
+import { Box, Grid, Typography, Link, IconButton } from "@mui/material";
 import { useTheme } from "@emotion/react";
+import FacebookIcon from "@mui/icons-material/Facebook";
+import InstagramIcon from "@mui/icons-material/Instagram";
+import TwitterIcon from "@mui/icons-material/Twitter";
+import { BoxStyled } from "./styles";
 
 const Footer = () => {
   const theme = useTheme();
+
   return (
     <Box
       component="footer"
       sx={{
-        backgroundColor: theme.palette.error.main,
-        p: { xs: 2, sm: 4 },
-        mt: "auto",
+        backgroundColor: theme.palette.error.main, // Use your desired theme color
+        padding: theme.spacing(2), // Responsive spacing
+        marginTop: "auto",
         borderTop: "1px solid #e0e0e0",
-        marginTop: "40px",
         color: "white",
       }}
     >
@@ -78,30 +82,47 @@ const Footer = () => {
           </Typography>
         </Grid>
 
-        {/* Column 4 */}
+        {/* Column 4: Social Media Icons */}
         <Grid item xs={12} sm={6} md={3}>
-          <Typography variant="h6" gutterBottom>
-            Social Media
+          <Typography variant="h6" gutterBottom textAlign="center">
+            Follow Us
           </Typography>
-          <Typography variant="body2">
-            <Link href="#" underline="none" color="inherit">
-              Facebook
-            </Link>
-          </Typography>
-          <Typography variant="body2">
-            <Link href="#" underline="none" color="inherit">
-              Instagram
-            </Link>
-          </Typography>
-          <Typography variant="body2">
-            <Link href="#" underline="none" color="inherit">
-              Twitter
-            </Link>
-          </Typography>
+          <Box
+            display="flex"
+            justifyContent="center"
+            alignItems="center"
+            gap={1}
+            mt={1}
+          >
+            <IconButton
+              href="https://facebook.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              sx={{ color: "white" }}
+            >
+              <FacebookIcon />
+            </IconButton>
+            <IconButton
+              href="https://instagram.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              sx={{ color: "white" }}
+            >
+              <InstagramIcon />
+            </IconButton>
+            <IconButton
+              href="https://twitter.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              sx={{ color: "white" }}
+            >
+              <TwitterIcon />
+            </IconButton>
+          </Box>
         </Grid>
       </Grid>
 
-      {/* Copyright */}
+      {/* Copyright Section */}
       <Box
         sx={{
           textAlign: "center",
@@ -111,8 +132,8 @@ const Footer = () => {
           color: "white",
         }}
       >
-        <Typography variant="body2" color="text.secondary">
-          © 2024 Your E-commerce Company. All rights reserved.
+        <Typography variant="body2" sx={{ color: "white" }}>
+          © 2024 Ecomms Nepal. All rights reserved.
         </Typography>
       </Box>
     </Box>
