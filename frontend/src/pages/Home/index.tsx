@@ -6,6 +6,10 @@ import { BoxStyled, CenteredBox, CustomBox, StyledImage } from "./styles";
 import { sliderSettings } from "../../utils/sliderSettings";
 import Services from "../Services";
 import CategorySlider from "../Products/slider/index";
+import Products from "../Products";
+import { Button, Box } from "@mui/material"; // Import MUI Button and Box
+import { Link } from "react-router-dom"; // Import Link from react-router-dom for navigation
+
 const Home = () => {
   return (
     <>
@@ -23,6 +27,20 @@ const Home = () => {
       <Services />
 
       <CategorySlider />
+
+      <Products />
+
+      {/* Button below products */}
+      <Box textAlign="center" m={4}>
+        <Button
+          variant="contained"
+          color="primary"
+          component={Link}
+          to="/products" // Link to the products page
+        >
+          View More Products
+        </Button>
+      </Box>
     </>
   );
 };

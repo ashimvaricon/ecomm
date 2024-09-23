@@ -1,5 +1,4 @@
 import { Typography, Stack } from "@mui/material";
-
 import {
   Box1Styled,
   BoxIconStyled,
@@ -15,14 +14,20 @@ const Services = () => {
     <div>
       <BoxStyled>
         <Typography variant="h3">Why Shop With Us</Typography>
-        <Stack direction="row" justifyContent="center" spacing={3}>
+        <Stack
+          direction={{ xs: "column", md: "row" }} // Responsive layout direction
+          justifyContent="center"
+          spacing={3}
+        >
           <Box1Styled>
             <Typography>
               <BoxIconStyled>
                 <LocalShippingOutlinedIconStyled />
-                <Typography variant="h5">Fast Delivery </Typography>
+                <Typography color="white" variant="h5">
+                  Fast Delivery
+                </Typography>
                 <TypographyStyled variant="body2">
-                  variations of passages of Lorem Ipsum available{" "}
+                  Variations of passages of Lorem Ipsum available
                 </TypographyStyled>
               </BoxIconStyled>
             </Typography>
@@ -32,9 +37,11 @@ const Services = () => {
             <Typography>
               <BoxIconStyled>
                 <ShoppingBagOutlinedIconStyled />
-                <Typography variant="h5">Free Shipping</Typography>
+                <Typography color="white" variant="h5">
+                  Free Shipping
+                </Typography>
                 <TypographyStyled variant="body2">
-                  variations of passages of Lorem Ipsum available{" "}
+                  Variations of passages of Lorem Ipsum available
                 </TypographyStyled>
               </BoxIconStyled>
             </Typography>
@@ -44,9 +51,11 @@ const Services = () => {
             <Typography>
               <BoxIconStyled>
                 <StarBorderOutlinedIconStyled />
-                <Typography variant="h5">Best Quality</Typography>
+                <Typography color="white" variant="h5">
+                  Best Quality
+                </Typography>
                 <TypographyStyled variant="body2">
-                  variations of passages of Lorem Ipsum available{" "}
+                  Variations of passages of Lorem Ipsum available
                 </TypographyStyled>
               </BoxIconStyled>
             </Typography>
