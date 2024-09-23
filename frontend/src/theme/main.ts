@@ -9,55 +9,47 @@ const theme = createTheme({
       contrastText: "#FFFFFF",
     },
     secondary: {
-      main: "#118AB2",
-      light: "#4EC3DF",
-      dark: "#0A7691",
-      contrastText: "#FFFFFF",
-    },
-    error: {
-      main: "#073B4C",
-      contrastText: "#FFFFFF",
-    },
-    warning: {
-      main: "#FFD166",
-      dark: "#E6B855",
-      contrastText: "#000000",
-    },
-    success: {
-      main: "#06D6A0",
-      dark: "#05B088",
-      contrastText: "#FFFFFF",
-    },
-    info: {
-      main: "#F78C6B",
+      main: "#fdc500",
+      light: "#ffdd73",
+      dark: "#c49d00",
       contrastText: "#FFFFFF",
     },
     background: {
-      default: "#F6F9FC",
-      paper: "#FFFFFF",
+      default: "#fffffa",
+      paper: "#ffffff",
     },
     text: {
-      primary: "#333333",
-      secondary: "#073B4C",
-      disabled: "#B0B0B0",
+      primary: "#003366",
+      secondary: "#707070",
+    },
+    success: {
+      main: "#00509d",
+    },
+    error: {
+      main: "#D9534F",
+    },
+    warning: {
+      main: "#fdc500",
+    },
+    info: {
+      main: "#00509d",
     },
   },
   typography: {
-    fontFamily: "Roboto, Arial, sans-serif",
+    fontFamily: '"Roboto", "Helvetica", "Arial", sans-serif',
     h1: {
       fontSize: "2.5rem",
       fontWeight: 700,
-      color: "#EF476F",
+      color: "#003366",
     },
     h2: {
       fontSize: "2rem",
       fontWeight: 600,
-      color: "#118AB2",
+      color: "#003366",
     },
     body1: {
       fontSize: "1rem",
-      fontWeight: 400,
-      color: "#333333",
+      color: "#003366",
     },
     button: {
       textTransform: "none",
@@ -68,41 +60,18 @@ const theme = createTheme({
     MuiButton: {
       styleOverrides: {
         root: {
-          borderRadius: "8px",
-          textTransform: "none",
+          borderRadius: "6px",
         },
         containedPrimary: {
-          backgroundColor: "#EF476F",
-          color: "#FFFFFF",
+          backgroundColor: "#00509d",
           "&:hover": {
-            backgroundColor: "#FF758F",
+            backgroundColor: "#003366",
           },
         },
         containedSecondary: {
-          backgroundColor: "#118AB2",
-          color: "#FFFFFF",
+          backgroundColor: "#fdc500",
           "&:hover": {
-            backgroundColor: "#4EC3DF",
-          },
-        },
-      },
-    },
-    MuiTextField: {
-      styleOverrides: {
-        root: {
-          "& label.Mui-focused": {
-            color: "#EF476F",
-          },
-          "& .MuiOutlinedInput-root": {
-            "& fieldset": {
-              borderColor: "#118AB2",
-            },
-            "&:hover fieldset": {
-              borderColor: "#EF476F",
-            },
-            "&.Mui-focused fieldset": {
-              borderColor: "#EF476F",
-            },
+            backgroundColor: "#ffdd73",
           },
         },
       },
@@ -110,14 +79,14 @@ const theme = createTheme({
     MuiAppBar: {
       styleOverrides: {
         colorPrimary: {
-          backgroundColor: "#073B4C",
+          backgroundColor: "#003366",
         },
       },
     },
     MuiPaper: {
       styleOverrides: {
         root: {
-          backgroundColor: "#FFFFFF",
+          backgroundColor: "#ffffff",
           boxShadow: "0px 3px 6px rgba(0, 0, 0, 0.1)",
         },
       },
